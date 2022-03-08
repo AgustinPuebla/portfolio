@@ -8,16 +8,9 @@
 }
 
 body {
-    background: linear-gradient(90deg, rgba(203,204,255,1) 0%, rgba(91,99,183,1) 50%);
-    background-size: 400% 400%;
-    animation: AnimationName 7s ease infinite;
+    background-image: linear-gradient(to left top, #f17a7c, #e06a90, #c262a4, #9762b2, #5b63b7);
 }
 
-@keyframes AnimationName {
-    0%{background-position:9% 0%}
-    50%{background-position:92% 100%}
-    100%{background-position:9% 0%}
-}
 
 nav {
     display: grid;
@@ -27,7 +20,22 @@ nav {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.850);
     border-radius: 0px 0px 40px 40px;
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+    animation-fill-mode: both;
 }
+
+@keyframes fadeInDown {
+    0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+    }
+    100% {
+    opacity: 1;
+
+    transform: none;
+    }
+} 
 
 nav ul {
     align-self: center;
@@ -79,12 +87,7 @@ section {
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-    
- @keyframes fadeIn {
+@keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
 } 
@@ -136,4 +139,105 @@ section {
     letter-spacing: 1px;
     padding: 0px 20px;
     margin-top: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        width: 1150px;
+    }
+    section {
+        width: 1100px;
+        margin-left: 25px;
+    }
+    footer {
+        width: 1150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 1150px;
+    }
+    section {
+        width: 1100px;
+        height: 900px;
+        margin-left: 20px;
+
+    }
+    footer {
+        width: 1150px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav {
+        width: 1150px;
+        height: 200px;
+    }
+    section {
+        width: 1050px;
+        height: 2000px;
+        margin-left: 50px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    footer {
+        width: 1150px;
+    }
+    .titulo {
+        text-align: center;
+        margin-right: 60px;
+    }
+
+    .titulo h1 {
+        font-size: 100px;
+        margin-top: 30px;
+    }
+    
+    .titulo h2 {
+        font-size: 50px;
+    }
+
+    .titulo h3 {
+        font-size: 30px;
+    }
+    
+    .titulo ul {
+        margin-top: 40px;
+    }
+    .titulo ul li a {
+        font-size: 40px;
+    }
+
+    .footer {
+        width: 1150px;
+        height: 300px;
+    }
+
+    .footer ul {
+        margin-top: 40px;
+    }
+
+    .footer ul li {
+        font-size: 25px;
+        color: #F17A7C;
+        letter-spacing: 1px;
+        margin-left: 40px;
+        }
+
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .imagen img {
+        width: 900px;
+        height: 900px;
+    }
 }
