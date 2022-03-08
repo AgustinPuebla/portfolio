@@ -152,7 +152,21 @@ section {
     height: 100px;
     margin-top: 50px;
     border-radius: 40px 40px 0px 0px;
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+    animation-fill-mode: both;
 }
+
+@keyframes fadeInUp {
+    0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+}
+100% {
+  opacity: 1;
+  transform: none;
+  }
+} 
 
 .footer ul li {
     font-size: 12px;
@@ -165,6 +179,7 @@ section {
 @media screen and (max-width: 1200px) {
     section {
         width: 90%;
+        height: 950px;
     }
 }
 
@@ -203,17 +218,16 @@ section {
     }
     section {
         width: 1050px;
-        height: 2000px;
+        height: 3100px;
         margin-left: 50px;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 800px 1fr;
     }
-    footer {
-        width: 1150px;
-    }
+
     .titulo {
         text-align: center;
         margin-right: 60px;
+        margin-top: 120px;
     }
 
     .titulo h1 {
@@ -221,19 +235,27 @@ section {
         margin-top: 30px;
     }
     
-    .titulo h2 {
-        font-size: 50px;
-    }
-
-    .titulo h3 {
-        font-size: 30px;
+    .formulario {
+        margin-left: 40px;
     }
     
-    .titulo ul {
-        margin-top: 40px;
+    .formulario h2 {
+        font-size: 70px;
+        text-align: center;
+        margin-left: 40px;
+        margin-bottom: 40px;
     }
-    .titulo ul li a {
-        font-size: 40px;
+
+    .formulario form label {
+        font-size: 80px;
+    }
+    
+    .formulario form input {
+        font-size: 80px;
+    }
+    
+    .formulario form textarea{
+        font-size: 60px;
     }
 
     .footer {

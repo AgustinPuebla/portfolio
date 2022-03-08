@@ -133,6 +133,9 @@ section {
   height: 100px;
   margin-top: 50px;
   border-radius: 40px 40px 0px 0px;
+  animation-name: fadeInUp;
+  animation-duration: 2s;
+  animation-fill-mode: both;
 }
 
 .footer ul li {
@@ -143,9 +146,30 @@ section {
   margin-top: 5px;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   section {
     width: 90%;
+    height: 900px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .proyectos-imagenes {
+    margin-bottom: 90px;
+  }
+  .proyectos-imagenes img {
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -155,7 +179,12 @@ section {
   }
   section {
     width: 1100px;
+    height: 900px;
     margin-left: 25px;
+  }
+  .proyectos-imagenes img {
+    width: 300px;
+    height: 300px;
   }
   footer {
     width: 1150px;
@@ -183,17 +212,15 @@ section {
   }
   section {
     width: 1050px;
-    height: 2000px;
+    height: 3500px;
     margin-left: 50px;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  footer {
-    width: 1150px;
+    grid-template-rows: 500px 1fr;
   }
   .titulo {
     text-align: center;
     margin-right: 60px;
+    margin-top: 100px;
   }
   .titulo h1 {
     font-size: 100px;
@@ -202,14 +229,10 @@ section {
   .titulo h2 {
     font-size: 50px;
   }
-  .titulo h3 {
-    font-size: 30px;
-  }
-  .titulo ul {
-    margin-top: 40px;
-  }
-  .titulo ul li a {
-    font-size: 40px;
+  .proyectos-imagenes img {
+    width: 900px;
+    height: 400px;
+    margin-left: 80px;
   }
   .footer {
     width: 1150px;

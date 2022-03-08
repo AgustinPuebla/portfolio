@@ -35,7 +35,7 @@ nav {
       display: inline-block;
 
       a {
-        color: #5B63B7;
+        color: $colorViolet;
         font-size: 15px;
         letter-spacing: 1px;
         font-weight: 1000;
@@ -69,7 +69,7 @@ nav {
 
 li a {
   &.active, &:hover {
-    color: rgb(255, 255, 255);
+    color: white;
     transition: 0.4s 0s ease;
   }
 }
@@ -108,18 +108,18 @@ section {
     font-size: 60px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #5B63B7;
+    color: $colorViolet;
   }
 
   h2 {
-    color: #5B63B7;
+    color: $colorViolet;
     font-size: 30px;
     letter-spacing: 1px;
     font-weight: 300;
   }
 
   h3 {
-    color: #F17A7C;
+    color: $colorRed;
     font-size: 10px;
     letter-spacing: 4px;
     font-weight: 1000;
@@ -131,14 +131,14 @@ section {
     line-height: 70px;
 
     a {
-      color: #5B63B7;
+      color: $colorViolet;
       font-size: 20px;
       letter-spacing: 2px;
       font-weight: 300;
       padding: 0px 20px;
 
       &:hover {
-        color: rgb(255, 255, 255);
+        color: white;
         transition: 0.4s 0s ease;
       }
     }
@@ -164,13 +164,28 @@ span {
   height: 100px;
   margin-top: 50px;
   border-radius: 40px 40px 0px 0px;
+  animation-name: fadeInUp;
+  animation-duration: 2s;
+  animation-fill-mode: both;
 
   ul li {
     font-size: 12px;
-    color: #F17A7C;
+    color: $colorRed;
     letter-spacing: 1px;
     padding: 0px 20px;
     margin-top: 5px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -219,14 +234,10 @@ span {
 
   section {
     width: 1050px;
-    height: 2000px;
+    height: 2150px;
     margin-left: 50px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-  }
-
-  footer {
-    width: 1150px;
   }
 
   .titulo {
@@ -264,7 +275,7 @@ span {
 
       li {
         font-size: 25px;
-        color: #F17A7C;
+        color: $colorRed;
         letter-spacing: 1px;
         margin-left: 40px;
       }

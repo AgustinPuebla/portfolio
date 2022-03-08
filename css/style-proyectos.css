@@ -8,8 +8,7 @@
 }
 
 body {
-    background: rgb(241,122,124);
-    background: linear-gradient(330deg, rgba(241,122,124,1) 0%, rgba(91,99,183,1) 73%);
+    background-image: linear-gradient(to left top, #f17a7c, #e06a90, #c262a4, #9762b2, #5b63b7);
 }
 
 
@@ -21,37 +20,22 @@ nav {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.850);
     border-radius: 0px 0px 40px 40px;
-    -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
+    animation-duration: 2s;
     animation-fill-mode: both;
-    }
-    @-webkit-keyframes fadeInDown {
+}
+
+@keyframes fadeInDown {
     0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
-    }
-    100% {
+}
+
+100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
-    }
-    }
-    @keyframes fadeInDown {
-    0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-    }
-    100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-    }
-    } 
+}
+} 
 
 nav ul {
     align-self: center;
@@ -147,7 +131,21 @@ section {
     height: 100px;
     margin-top: 50px;
     border-radius: 40px 40px 0px 0px;
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+    animation-fill-mode: both;
 }
+
+@keyframes fadeInUp {
+    0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+}
+100% {
+  opacity: 1;
+  transform: none;
+  }
+} 
 
 .footer ul li {
     font-size: 12px;
@@ -155,4 +153,131 @@ section {
     letter-spacing: 1px;
     padding: 0px 20px;
     margin-top: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        width: 90%;
+    }
+    
+    .proyectos-imagenes img {
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        width: 1150px;
+    }
+    section {
+        width: 1100px;
+        margin-left: 25px;
+    }
+    footer {
+        width: 1150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 1150px;
+    }
+    section {
+        width: 1100px;
+        height: 1200px;
+        margin-left: 20px;
+    }
+    
+    .titulo {
+        margin-top: 100px;
+        margin-right: 30px;
+    }
+
+    .titulo h1 {
+        font-size: 80px;
+    }
+
+    .titulo h2 {
+        font-size: 60px;
+    }
+
+    .proyectos-imagenes {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-top: 900px;
+        gap: 20px;
+    }
+    .proyectos-imagenes img {
+        width: 800px;
+        height: 300px;
+    }
+
+    footer {
+        width: 1150px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav {
+        width: 1150px;
+        height: 200px;
+    }
+    section {
+        width: 1050px;
+        height: 2150px;
+        margin-left: 50px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px 500px;
+    }
+
+    .titulo {
+        text-align: center;
+        margin-right: 60px;
+        margin-top: 100px;
+    }
+
+    .titulo h1 {
+        font-size: 100px;
+        margin-top: 30px;
+    }
+    
+    .titulo h2 {
+        font-size: 50px;
+    }
+    
+
+    .proyectos-imagenes img {
+        width: 900px;
+        height: 400px;
+        margin-left: 20px;
+    }
+
+    .footer {
+        width: 1150px;
+        height: 300px;
+    }
+
+    .footer ul {
+        margin-top: 40px;
+    }
+
+    .footer ul li {
+        font-size: 25px;
+        color: #F17A7C;
+        letter-spacing: 1px;
+        margin-left: 40px;
+        }
+
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .imagen img {
+        width: 900px;
+        height: 900px;
+    }
 }
